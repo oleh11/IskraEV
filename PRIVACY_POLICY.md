@@ -34,4 +34,4 @@ Iskra EV Companion is an independent open-source project. It is not affiliated w
 
 ## Changes and contact
 
-Changes will be posted here with an updated date. Questions: open an issue at https://github.com/oleh11/IoniqCompanionApp/issues
+Changes will be posted here with an updated date. Questions: open an issue at https://github.com/oleh11/IskraEV/issues

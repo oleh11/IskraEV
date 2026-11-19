@@ -20,4 +20,4 @@ Built for the Hyundai/Kia/Genesis E-GMP platform (IONIQ 5, IONIQ 5 N, IONIQ 6, I
 
 Iskra EV Companion is an independent open-source project (MIT). It is not affiliated with or endorsed by Hyundai, Kia or Genesis; those names are trademarks of their owners and are used only to describe compatibility.
 
-Source code: github.com/oleh11/IoniqCompanionApp
+Source code: github.com/oleh11/IskraEV
