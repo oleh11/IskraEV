@@ -22,10 +22,10 @@
 ## 📱 App Preview
 
 <p align="center">
-  <img src="assets/screens/1-drive.png" width="19%" alt="Drive dashboard: power dial, state of charge, range" />
+  <img src="assets/screens/1-drive.png" width="19%" alt="Car screen: range, car with tyre pressures, battery" />
   <img src="assets/screens/2-cells.png" width="19%" alt="192-cell voltage heatmap" />
-  <img src="assets/screens/3-charge.png" width="19%" alt="800V DC fast charging telemetry" />
-  <img src="assets/screens/4-tpms.png" width="19%" alt="Tyre pressure and motor telemetry" />
+  <img src="assets/screens/3-charge.png" width="19%" alt="Charge screen: power ring and session numbers" />
+  <img src="assets/screens/4-tpms.png" width="19%" alt="Tyres and climate detail page" />
   <img src="assets/screens/5-setup.png" width="19%" alt="Adapter setup and demo simulator" />
 </p>
 
@@ -48,7 +48,12 @@
 
 ## ✨ Key Features
 
-### ⚡ Drive Dashboard
+### 🚗 Car-first home screen
+- **Huge range number** and a charge bar, with a **top-down car** showing live tyre pressure and temperature at each wheel.
+- **Liquid-fill battery** and a marker on each motor. Tap the tyres, battery or motors to open their detail pages.
+- Live power, efficiency and pack temperature underneath. Three simple tabs: Car, Charge, Setup.
+
+### ⚡ Power & efficiency
 - **Bi-directional power dial** showing motor draw (+kW) and regeneration (−kW).
 - **State-of-charge ring** with display SOC, pack voltage and remaining kWh.
 - **Range & efficiency** with a 15-minute trend and battery pre-conditioning status.

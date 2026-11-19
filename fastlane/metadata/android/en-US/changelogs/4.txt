@@ -1,0 +1,1 @@
+Completely redesigned: a car-first home screen with tyre pressures at the wheels and a live battery, a big charging ring, three simple tabs, and much snappier animations.

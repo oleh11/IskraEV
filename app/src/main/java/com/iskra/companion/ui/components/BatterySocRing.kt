@@ -58,7 +58,7 @@ fun BatterySocRing(
 ) {
     val animatedSoc by animateFloatAsState(
         targetValue = battery.socDisplay,
-        animationSpec = tween(durationMillis = 200),
+        animationSpec = tween(durationMillis = 110),
         label = "socAnimation"
     )
 

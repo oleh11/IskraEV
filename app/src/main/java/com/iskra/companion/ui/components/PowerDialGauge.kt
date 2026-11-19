@@ -63,7 +63,7 @@ fun PowerDialGauge(
 ) {
     val animatedPower by animateFloatAsState(
         targetValue = powerKw,
-        animationSpec = tween(durationMillis = 150),
+        animationSpec = tween(durationMillis = 90),
         label = "powerDialAnimation"
     )
 

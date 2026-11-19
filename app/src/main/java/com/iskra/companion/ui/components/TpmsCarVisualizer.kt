@@ -55,7 +55,7 @@ fun TpmsCarVisualizer(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(4.dp),
+        shape = RoundedCornerShape(26.dp),
         colors = CardDefaults.cardColors(containerColor = SurfaceCard),
         border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
     ) {
