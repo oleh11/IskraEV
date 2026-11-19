@@ -1,0 +1,23 @@
+Iskra EV Companion turns your phone and Android Auto screen into a live dashboard for your electric car. Plug in a Bluetooth OBD-II adapter (such as Veepeak OBDCheck BLE, BLE+, VP11 or VP30, or another ELM327 adapter) and see what the car's battery management system reports.
+
+<b>What you get</b>
+• Power dial with live motor draw and regenerative braking
+• State of charge ring with pack voltage, current and remaining kWh
+• 192-cell voltage heatmap with min/max cell and cell delta warnings
+• Battery temperatures and 12V auxiliary battery health
+• DC fast-charging view: kW, current, voltage, energy added and time to 80%
+• Four-wheel tyre pressure and temperature with low-pressure alerts
+• Front and rear motor and inverter temperatures
+• Android Auto screens for driving, charging and cell diagnostics
+• Demo mode with four realistic drive and charge scenarios, so you can try everything without a car or adapter
+• CSV export of your session logs
+
+<b>Private by design</b>
+No ads, no account, no tracking. The app has no internet permission, so your car's data never leaves your phone.
+
+<b>Compatibility</b>
+Built for the Hyundai/Kia/Genesis E-GMP platform (IONIQ 5, IONIQ 5 N, IONIQ 6, IONIQ 9, Kia EV6, EV9, Genesis GV60). Other brands and models may report only part of the data. Requires a separate Bluetooth OBD-II adapter.
+
+Iskra EV Companion is an independent open-source project (MIT). It is not affiliated with or endorsed by Hyundai, Kia or Genesis; those names are trademarks of their owners and are used only to describe compatibility.
+
+Source code: github.com/oleh11/IoniqCompanionApp

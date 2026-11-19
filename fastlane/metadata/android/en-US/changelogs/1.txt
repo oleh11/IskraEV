@@ -1,0 +1,1 @@
+First release: live battery, power, cell and tyre data for Hyundai/Kia EVs over an OBD-II adapter, Android Auto screens and a demo mode.
