@@ -1,32 +1,43 @@
 ﻿package com.iskra.companion.ui.theme
 
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 
-// 2018 Material Design Dark Automotive Palette (Clean, High-Utility, Zero-Slop)
-val CockpitBg = Color(0xFF121212)             // Classic 2018 Dark Theme Background
-val SurfaceCard = Color(0xFF1E1E1E)           // Material Elevation 1 Card Surface
-val SurfaceCardSecondary = Color(0xFF252525)  // Material Elevation 2 Surface
-val SurfaceCardElevated = Color(0xFF2D2D2D)   // Material Elevation 3 Surface
-val CardBorder = Color(0xFF333333)            // Clean, subtle tactile border
-val CardBorderSubtle = Color(0xFF282828)
+// Iskra "Cyber Dashboard" palette: deep navy-black glass surfaces with neon cyan / teal sparks.
+val CockpitBg = Color(0xFF05080F)             // Near-black navy canvas
+val SurfaceCard = Color(0xFF0C1524)           // Glass card surface
+val SurfaceCardSecondary = Color(0xFF111E33)  // Raised surface
+val SurfaceCardElevated = Color(0xFF182843)   // Track / chip surface
+val CardBorder = Color(0xFF1C3050)            // Cool hairline border
+val CardBorderSubtle = Color(0xFF142238)
 
-// Classic 2018 Material Accents
-val HyundaiBlue = Color(0xFF1976D2)           // Material Blue 700
-val IoniqCyan = Color(0xFF00ACC1)             // Material Cyan 600
-val IoniqPixel = Color(0xFF2196F3)            // Material Blue 500
-val EcoGreen = Color(0xFF4CAF50)              // Material Green 500 (Regen / OK)
-val EcoGreenSubtle = Color(0xFF1B5E20)        // Material Green 900
-val PowerAmber = Color(0xFFFFA000)            // Material Amber 700 (Power Draw / Heating)
-val PowerRed = Color(0xFFE53935)              // Material Red 600 (Warning / Critical)
+// Accents (names kept for compatibility, values re-tuned)
+val HyundaiBlue = Color(0xFF22D3EE)           // Spark cyan (primary accent)
+val IoniqCyan = Color(0xFF2DD4BF)             // Teal
+val IoniqPixel = Color(0xFF60A5FA)            // Soft blue
+val EcoGreen = Color(0xFF34D399)              // Regen / OK
+val EcoGreenSubtle = Color(0xFF064E3B)
+val PowerAmber = Color(0xFFFBBF24)            // Power draw / heating
+val PowerRed = Color(0xFFFB7185)              // Warning / critical
 
-// High-Contrast Classic Typography
-val TextPrimary = Color(0xFFEEEEEE)           // High emphasis text
-val TextSecondary = Color(0xFF9E9E9E)         // Medium emphasis text
-val TextMuted = Color(0xFF757575)             // Low emphasis / unit labels
-val TextInverse = Color(0xFF121212)
+// Typography
+val TextPrimary = Color(0xFFF1F5F9)
+val TextSecondary = Color(0xFF94A3B8)
+val TextMuted = Color(0xFF64748B)
+val TextInverse = Color(0xFF05080F)
 
-// Battery Cell Thermal Spectrum (Classic Torque / Car Scanner heatmap)
-val CellCool = Color(0xFF1976D2)
-val CellNominal = Color(0xFF388E3C)
-val CellWarm = Color(0xFFF57C00)
-val CellHot = Color(0xFFD32F2F)
+// Battery cell thermal spectrum
+val CellCool = Color(0xFF0EA5E9)
+val CellNominal = Color(0xFF16A34A)
+val CellWarm = Color(0xFFD97706)
+val CellHot = Color(0xFFDC2626)
+
+/** Subtle glow gradient used behind the round gauges. */
+val GaugeGlowBrush: Brush = Brush.radialGradient(
+    colors = listOf(Color(0xFF12233F), Color(0xFF0A1322))
+)
+
+/** Soft vertical sheen for hero cards. */
+val CardSheenBrush: Brush = Brush.verticalGradient(
+    colors = listOf(Color(0xFF0F1B30), Color(0xFF0A1220))
+)

@@ -144,7 +144,7 @@ fun MainApp(repository: TelemetryRepository) {
                             selectedTextColor = HyundaiBlue,
                             unselectedIconColor = TextMuted,
                             unselectedTextColor = TextMuted,
-                            indicatorColor = SurfaceCardSecondary
+                            indicatorColor = HyundaiBlue.copy(alpha = 0.16f)
                         ),
                         onClick = {
                             if (currentRoute != screen.route) {

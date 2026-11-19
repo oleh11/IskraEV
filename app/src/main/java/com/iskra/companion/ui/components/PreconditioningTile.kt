@@ -57,7 +57,7 @@ fun PreconditioningTile(
 
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(4.dp),
+        shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(containerColor = SurfaceCard),
         border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
     ) {
@@ -87,9 +87,9 @@ fun PreconditioningTile(
 
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(3.dp))
+                        .clip(RoundedCornerShape(10.dp))
                         .background(SurfaceCardElevated)
-                        .border(1.dp, statusColor.copy(alpha = 0.5f), RoundedCornerShape(3.dp))
+                        .border(1.dp, statusColor.copy(alpha = 0.5f), RoundedCornerShape(10.dp))
                         .padding(horizontal = 6.dp, vertical = 2.dp)
                 ) {
                     Text(
@@ -161,7 +161,7 @@ fun PreconditioningTile(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(3.dp))
+                    .clip(RoundedCornerShape(10.dp))
                     .background(SurfaceCardElevated)
                     .padding(horizontal = 10.dp, vertical = 6.dp),
                 horizontalArrangement = Arrangement.SpaceBetween

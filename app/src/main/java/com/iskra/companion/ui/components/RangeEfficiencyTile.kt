@@ -65,7 +65,7 @@ fun RangeEfficiencyTile(
 
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(4.dp),
+        shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(containerColor = SurfaceCard),
         border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
     ) {
@@ -96,7 +96,7 @@ fun RangeEfficiencyTile(
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
-                        .clip(RoundedCornerShape(3.dp))
+                        .clip(RoundedCornerShape(10.dp))
                         .background(SurfaceCardElevated)
                         .padding(horizontal = 6.dp, vertical = 2.dp)
                 ) {

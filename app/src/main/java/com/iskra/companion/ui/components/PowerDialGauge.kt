@@ -75,7 +75,7 @@ fun PowerDialGauge(
         modifier = modifier
             .size(size)
             .clip(CircleShape)
-            .background(SurfaceCard)
+            .background(com.iskra.companion.ui.theme.GaugeGlowBrush)
             .border(1.5.dp, CardBorder, CircleShape),
         contentAlignment = Alignment.Center
     ) {
@@ -110,6 +110,16 @@ fun PowerDialGauge(
                 // Regen sweeps counter-clockwise from 270° back towards 135°
                 val regenFraction = (absPower / 60.0f).coerceIn(0f, 1f)
                 val sweep = -(regenFraction * 135f)
+                // Neon glow under the active arc
+                drawArc(
+                    color = EcoGreen.copy(alpha = 0.22f),
+                    startAngle = zeroAngle,
+                    sweepAngle = sweep,
+                    useCenter = false,
+                    topLeft = Offset(center.x - radius, center.y - radius),
+                    size = Size(radius * 2f, radius * 2f),
+                    style = Stroke(width = trackWidth * 2.6f, cap = StrokeCap.Round)
+                )
                 drawArc(
                     color = EcoGreen,
                     startAngle = zeroAngle,
@@ -124,6 +134,16 @@ fun PowerDialGauge(
                 val drawFraction = (absPower / 200.0f).coerceIn(0f, 1f)
                 val sweep = drawFraction * 135f
                 val color = if (absPower > 150f) PowerRed else if (absPower > 80f) PowerAmber else HyundaiBlue
+                // Neon glow under the active arc
+                drawArc(
+                    color = color.copy(alpha = 0.22f),
+                    startAngle = zeroAngle,
+                    sweepAngle = sweep,
+                    useCenter = false,
+                    topLeft = Offset(center.x - radius, center.y - radius),
+                    size = Size(radius * 2f, radius * 2f),
+                    style = Stroke(width = trackWidth * 2.6f, cap = StrokeCap.Round)
+                )
                 drawArc(
                     color = color,
                     startAngle = zeroAngle,
@@ -167,17 +187,23 @@ fun PowerDialGauge(
             val needleEnd = Offset(center.x + needleLen * cos(needleRad), center.y + needleLen * sin(needleRad))
             val needleColor = if (isRegen) EcoGreen else if (absPower > 100f) PowerAmber else TextPrimary
 
+            // Needle starts outside the numeric readout so it never crosses the digits
+            val needleStartLen = radius * 0.62f
+            val needleStart = Offset(center.x + needleStartLen * cos(needleRad), center.y + needleStartLen * sin(needleRad))
+            drawLine(
+                color = needleColor.copy(alpha = 0.25f),
+                start = needleStart,
+                end = needleEnd,
+                strokeWidth = 7.dp.toPx(),
+                cap = StrokeCap.Round
+            )
             drawLine(
                 color = needleColor,
-                start = center,
+                start = needleStart,
                 end = needleEnd,
                 strokeWidth = 2.5.dp.toPx(),
                 cap = StrokeCap.Round
             )
-
-            // Needle Center Pivot Cap
-            drawCircle(color = SurfaceCardElevated, radius = 7.dp.toPx(), center = center)
-            drawCircle(color = needleColor, radius = 3.dp.toPx(), center = center)
         }
 
         // Center Digital Numeric Display & Gear

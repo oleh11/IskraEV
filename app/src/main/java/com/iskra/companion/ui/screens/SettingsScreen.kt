@@ -98,7 +98,7 @@ fun SettingsScreen(
         // OBD-II Adapter Section Card
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(4.dp),
+            shape = RoundedCornerShape(18.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -159,8 +159,8 @@ fun SettingsScreen(
 
                 Button(
                     onClick = onStartScan,
-                    colors = ButtonDefaults.buttonColors(containerColor = HyundaiBlue, contentColor = TextPrimary),
-                    shape = RoundedCornerShape(4.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = HyundaiBlue, contentColor = com.iskra.companion.ui.theme.TextInverse),
+                    shape = RoundedCornerShape(18.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Icon(Icons.Default.BluetoothSearching, contentDescription = null, modifier = Modifier.size(16.dp))
@@ -247,9 +247,9 @@ fun SettingsScreen(
                                     onClick = { onConnectDevice(device) },
                                     colors = ButtonDefaults.buttonColors(
                                         containerColor = if (isBestSignal) HyundaiBlue else SurfaceCardElevated,
-                                        contentColor = TextPrimary
+                                        contentColor = if (isBestSignal) com.iskra.companion.ui.theme.TextInverse else TextPrimary
                                     ),
-                                    shape = RoundedCornerShape(2.dp)
+                                    shape = RoundedCornerShape(10.dp)
                                 ) {
                                     Text("Pair", fontSize = 10.sp, fontWeight = FontWeight.Bold)
                                 }
@@ -263,7 +263,7 @@ fun SettingsScreen(
         // Vehicle Profile Card
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(4.dp),
+            shape = RoundedCornerShape(18.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -299,7 +299,7 @@ fun SettingsScreen(
                             focusedIndicatorColor = HyundaiBlue,
                             unfocusedIndicatorColor = CardBorderSubtle
                         ),
-                        shape = RoundedCornerShape(4.dp),
+                        shape = RoundedCornerShape(18.dp),
                         modifier = Modifier
                             .fillMaxWidth()
                             .menuAnchor()
@@ -332,7 +332,7 @@ fun SettingsScreen(
         // Demo Simulator Card
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(4.dp),
+            shape = RoundedCornerShape(18.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -396,7 +396,7 @@ fun SettingsScreen(
         // Android Auto Setup Guide Card
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(4.dp),
+            shape = RoundedCornerShape(18.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {

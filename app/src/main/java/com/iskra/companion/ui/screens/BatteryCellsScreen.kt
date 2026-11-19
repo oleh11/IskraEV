@@ -64,9 +64,9 @@ fun BatteryCellsScreen(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(4.dp))
+                .clip(RoundedCornerShape(18.dp))
                 .background(SurfaceCard)
-                .border(1.dp, CardBorder, RoundedCornerShape(4.dp))
+                .border(1.dp, CardBorder, RoundedCornerShape(18.dp))
                 .padding(horizontal = 12.dp, vertical = 8.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
@@ -118,7 +118,7 @@ fun BatteryCellsScreen(
         // Energy Throughput Card
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(4.dp),
+            shape = RoundedCornerShape(18.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {

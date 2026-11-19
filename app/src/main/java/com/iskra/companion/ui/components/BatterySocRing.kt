@@ -74,7 +74,7 @@ fun BatterySocRing(
         modifier = modifier
             .size(size)
             .clip(CircleShape)
-            .background(SurfaceCard)
+            .background(com.iskra.companion.ui.theme.GaugeGlowBrush)
             .border(1.5.dp, CardBorder, CircleShape),
         contentAlignment = Alignment.Center
     ) {
@@ -102,6 +102,16 @@ fun BatterySocRing(
             // 2. Active SOC Arc
             if (isConnected && animatedSoc > 0f) {
                 val sweep = (animatedSoc / 100f).coerceIn(0f, 1f) * totalSweep
+                // Neon glow under the active arc
+                drawArc(
+                    color = socColor.copy(alpha = 0.22f),
+                    startAngle = startAngle,
+                    sweepAngle = sweep,
+                    useCenter = false,
+                    topLeft = Offset(center.x - radius, center.y - radius),
+                    size = Size(radius * 2f, radius * 2f),
+                    style = Stroke(width = trackWidth * 2.6f, cap = StrokeCap.Round)
+                )
                 drawArc(
                     color = socColor,
                     startAngle = startAngle,
