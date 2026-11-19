@@ -69,9 +69,9 @@ fun ChargingScreen(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(18.dp))
+                .clip(RoundedCornerShape(26.dp))
                 .background(SurfaceCard)
-                .border(1.dp, CardBorder, RoundedCornerShape(18.dp))
+                .border(1.dp, CardBorder, RoundedCornerShape(26.dp))
                 .padding(horizontal = 12.dp, vertical = 8.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
@@ -104,7 +104,7 @@ fun ChargingScreen(
                     fontSize = 10.sp,
                     fontWeight = FontWeight.Bold,
                     color = if (isCharging) EcoGreen else TextMuted,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
             }
         }
@@ -161,7 +161,7 @@ fun ChargingScreen(
         // Charge Session Statistics
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
+            shape = RoundedCornerShape(26.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -194,6 +194,6 @@ private fun SessionRow(label: String, value: String) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(text = label, fontSize = 12.sp, color = TextSecondary)
-        Text(text = value, fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = TextPrimary, fontFamily = FontFamily.Monospace)
+        Text(text = value, fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = TextPrimary, fontFamily = FontFamily.SansSerif)
     }
 }

@@ -62,7 +62,7 @@ fun CellVoltageHeatmap(
 
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(18.dp),
+        shape = RoundedCornerShape(26.dp),
         colors = CardDefaults.cardColors(containerColor = SurfaceCard),
         border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
     ) {
@@ -109,7 +109,7 @@ fun CellVoltageHeatmap(
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
                         color = deltaColor,
-                        fontFamily = FontFamily.Monospace
+                        fontFamily = FontFamily.SansSerif
                     )
                 }
             }
@@ -131,19 +131,19 @@ fun CellVoltageHeatmap(
                     text = "Min: #${cellData.minCellIndex + 1} (${String.format("%.3f", cellData.minCellVoltage)}V)",
                     fontSize = 10.sp,
                     color = HyundaiBlue,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
                 Text(
                     text = "Avg: ${String.format("%.3f", avgVoltage)}V",
                     fontSize = 10.sp,
                     color = TextPrimary,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
                 Text(
                     text = "Max: #${cellData.maxCellIndex + 1} (${String.format("%.3f", cellData.maxCellVoltage)}V)",
                     fontSize = 10.sp,
                     color = CellWarm,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
             }
 
@@ -190,7 +190,7 @@ fun CellVoltageHeatmap(
                             fontSize = 6.5.sp,
                             fontWeight = FontWeight.Bold,
                             color = if (!hasCells) TextMuted else Color.White,
-                            fontFamily = FontFamily.Monospace
+                            fontFamily = FontFamily.SansSerif
                         )
                     }
                 }
@@ -225,7 +225,7 @@ fun CellVoltageHeatmap(
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Bold,
                         color = EcoGreen,
-                        fontFamily = FontFamily.Monospace
+                        fontFamily = FontFamily.SansSerif
                     )
                 }
             }

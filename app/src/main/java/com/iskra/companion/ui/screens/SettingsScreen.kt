@@ -98,7 +98,7 @@ fun SettingsScreen(
         // OBD-II Adapter Section Card
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
+            shape = RoundedCornerShape(26.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -150,7 +150,7 @@ fun SettingsScreen(
                             fontSize = 9.sp,
                             fontWeight = FontWeight.Bold,
                             color = statusColor,
-                            fontFamily = FontFamily.Monospace
+                            fontFamily = FontFamily.SansSerif
                         )
                     }
                 }
@@ -160,7 +160,7 @@ fun SettingsScreen(
                 Button(
                     onClick = onStartScan,
                     colors = ButtonDefaults.buttonColors(containerColor = HyundaiBlue, contentColor = com.iskra.companion.ui.theme.TextInverse),
-                    shape = RoundedCornerShape(18.dp),
+                    shape = RoundedCornerShape(26.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Icon(Icons.Default.BluetoothSearching, contentDescription = null, modifier = Modifier.size(16.dp))
@@ -238,7 +238,7 @@ fun SettingsScreen(
                                             text = "${device.address} • $signalPercent% (${device.rssi} dBm)",
                                             fontSize = 9.sp,
                                             color = if (isBestSignal) EcoGreen else TextMuted,
-                                            fontFamily = FontFamily.Monospace
+                                            fontFamily = FontFamily.SansSerif
                                         )
                                     }
                                 }
@@ -249,7 +249,7 @@ fun SettingsScreen(
                                         containerColor = if (isBestSignal) HyundaiBlue else SurfaceCardElevated,
                                         contentColor = if (isBestSignal) com.iskra.companion.ui.theme.TextInverse else TextPrimary
                                     ),
-                                    shape = RoundedCornerShape(10.dp)
+                                    shape = RoundedCornerShape(14.dp)
                                 ) {
                                     Text("Pair", fontSize = 10.sp, fontWeight = FontWeight.Bold)
                                 }
@@ -263,7 +263,7 @@ fun SettingsScreen(
         // Vehicle Profile Card
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
+            shape = RoundedCornerShape(26.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -299,7 +299,7 @@ fun SettingsScreen(
                             focusedIndicatorColor = HyundaiBlue,
                             unfocusedIndicatorColor = CardBorderSubtle
                         ),
-                        shape = RoundedCornerShape(18.dp),
+                        shape = RoundedCornerShape(26.dp),
                         modifier = Modifier
                             .fillMaxWidth()
                             .menuAnchor()
@@ -332,7 +332,7 @@ fun SettingsScreen(
         // Demo Simulator Card
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
+            shape = RoundedCornerShape(26.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -396,7 +396,7 @@ fun SettingsScreen(
         // Android Auto Setup Guide Card
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
+            shape = RoundedCornerShape(26.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {

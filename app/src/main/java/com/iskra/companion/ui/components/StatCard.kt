@@ -49,7 +49,7 @@ fun StatCard(
 ) {
     Card(
         modifier = modifier,
-        shape = RoundedCornerShape(18.dp),
+        shape = RoundedCornerShape(26.dp),
         colors = CardDefaults.cardColors(containerColor = SurfaceCard),
         border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
     ) {
@@ -84,10 +84,10 @@ fun StatCard(
             Row(verticalAlignment = Alignment.Bottom) {
                 Text(
                     text = value,
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
+                    fontSize = 30.sp,
+                    fontWeight = FontWeight.Light,
                     color = TextPrimary,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
                 Text(
                     text = " $unit",
@@ -104,7 +104,7 @@ fun StatCard(
                     text = subValue,
                     fontSize = 10.sp,
                     color = TextMuted,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
             }
         }

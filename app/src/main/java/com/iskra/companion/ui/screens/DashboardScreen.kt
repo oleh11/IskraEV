@@ -82,9 +82,9 @@ fun DashboardScreen(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(18.dp))
+                .clip(RoundedCornerShape(26.dp))
                 .background(com.iskra.companion.ui.theme.CardSheenBrush)
-                .border(1.dp, HyundaiBlue.copy(alpha = 0.35f), RoundedCornerShape(18.dp))
+                .border(1.dp, CardBorder, RoundedCornerShape(26.dp))
                 .padding(horizontal = 12.dp, vertical = 8.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
@@ -114,7 +114,7 @@ fun DashboardScreen(
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
-                    .clip(RoundedCornerShape(10.dp))
+                    .clip(RoundedCornerShape(14.dp))
                     .background(SurfaceCardElevated)
                     .padding(horizontal = 8.dp, vertical = 4.dp)
             ) {
@@ -130,7 +130,7 @@ fun DashboardScreen(
                     fontSize = 10.sp,
                     fontWeight = FontWeight.Bold,
                     color = statusColor,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
             }
         }
@@ -141,7 +141,7 @@ fun DashboardScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable { onNavigateToSettings() },
-                shape = RoundedCornerShape(18.dp),
+                shape = RoundedCornerShape(26.dp),
                 colors = CardDefaults.cardColors(containerColor = SurfaceCard),
                 border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(HyundaiBlue.copy(alpha = 0.6f)))
             ) {
@@ -179,7 +179,7 @@ fun DashboardScreen(
                     Button(
                         onClick = onNavigateToSettings,
                         colors = ButtonDefaults.buttonColors(containerColor = HyundaiBlue, contentColor = com.iskra.companion.ui.theme.TextInverse),
-                        shape = RoundedCornerShape(18.dp)
+                        shape = RoundedCornerShape(26.dp)
                     ) {
                         Text("Connect", fontSize = 11.sp, fontWeight = FontWeight.Bold)
                     }
@@ -223,7 +223,7 @@ fun DashboardScreen(
         // Live Power Dynamic Flow Chart
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
+            shape = RoundedCornerShape(26.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -245,7 +245,7 @@ fun DashboardScreen(
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
                         color = if (telemetry.battery.powerKw > 0) EcoGreen else HyundaiBlue,
-                        fontFamily = FontFamily.Monospace
+                        fontFamily = FontFamily.SansSerif
                     )
                 }
 
@@ -310,7 +310,7 @@ fun DashboardScreen(
         // Subsystem Energy Breakdown Table
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
+            shape = RoundedCornerShape(26.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -381,7 +381,7 @@ fun PowerRow(
             fontSize = 12.sp,
             fontWeight = FontWeight.SemiBold,
             color = TextPrimary,
-            fontFamily = FontFamily.Monospace
+            fontFamily = FontFamily.SansSerif
         )
     }
 }

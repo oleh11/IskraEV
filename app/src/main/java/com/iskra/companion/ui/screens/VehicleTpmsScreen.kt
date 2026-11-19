@@ -66,9 +66,9 @@ fun VehicleTpmsScreen(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(18.dp))
+                .clip(RoundedCornerShape(26.dp))
                 .background(SurfaceCard)
-                .border(1.dp, CardBorder, RoundedCornerShape(18.dp))
+                .border(1.dp, CardBorder, RoundedCornerShape(26.dp))
                 .padding(horizontal = 12.dp, vertical = 8.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
@@ -85,7 +85,7 @@ fun VehicleTpmsScreen(
                 fontSize = 10.sp,
                 fontWeight = FontWeight.Bold,
                 color = if (isConnected) EcoGreen else TextMuted,
-                fontFamily = FontFamily.Monospace
+                fontFamily = FontFamily.SansSerif
             )
         }
 
@@ -95,7 +95,7 @@ fun VehicleTpmsScreen(
         // Drivetrain & Motor Thermals
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
+            shape = RoundedCornerShape(26.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -120,7 +120,7 @@ fun VehicleTpmsScreen(
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
                             color = HyundaiBlue,
-                            fontFamily = FontFamily.Monospace
+                            fontFamily = FontFamily.SansSerif
                         )
                     }
                     Column {
@@ -130,7 +130,7 @@ fun VehicleTpmsScreen(
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
                             color = HyundaiBlue,
-                            fontFamily = FontFamily.Monospace
+                            fontFamily = FontFamily.SansSerif
                         )
                     }
                     Column {
@@ -140,7 +140,7 @@ fun VehicleTpmsScreen(
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
                             color = PowerAmber,
-                            fontFamily = FontFamily.Monospace
+                            fontFamily = FontFamily.SansSerif
                         )
                     }
                 }

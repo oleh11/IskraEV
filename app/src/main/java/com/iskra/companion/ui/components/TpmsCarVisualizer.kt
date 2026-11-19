@@ -95,7 +95,7 @@ fun TpmsCarVisualizer(
                             fontSize = 9.sp,
                             fontWeight = FontWeight.Bold,
                             color = PowerRed,
-                            fontFamily = FontFamily.Monospace
+                            fontFamily = FontFamily.SansSerif
                         )
                     }
                 }
@@ -251,13 +251,13 @@ private fun TireMetricBox(
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Bold,
                 color = if (isWarning) PowerRed else TextPrimary,
-                fontFamily = FontFamily.Monospace
+                fontFamily = FontFamily.SansSerif
             )
             Text(
                 text = if (tempC > 0f) "${tempC.toInt()}°C" else "--°C",
                 fontSize = 10.sp,
                 color = TextSecondary,
-                fontFamily = FontFamily.Monospace
+                fontFamily = FontFamily.SansSerif
             )
         }
     }

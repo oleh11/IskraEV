@@ -130,8 +130,8 @@ fun MainApp(repository: TelemetryRepository) {
         containerColor = CockpitBg,
         bottomBar = {
             NavigationBar(
-                containerColor = SurfaceCard,
-                tonalElevation = 4.dp
+                containerColor = CockpitBg,
+                tonalElevation = 0.dp
             ) {
                 screens.forEach { screen ->
                     val isSelected = currentRoute == screen.route
@@ -144,7 +144,7 @@ fun MainApp(repository: TelemetryRepository) {
                             selectedTextColor = HyundaiBlue,
                             unselectedIconColor = TextMuted,
                             unselectedTextColor = TextMuted,
-                            indicatorColor = HyundaiBlue.copy(alpha = 0.16f)
+                            indicatorColor = androidx.compose.ui.graphics.Color.Transparent
                         ),
                         onClick = {
                             if (currentRoute != screen.route) {

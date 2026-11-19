@@ -82,7 +82,7 @@ fun BatterySocRing(
             val w = size.toPx()
             val h = size.toPx()
             val center = Offset(w / 2f, h / 2f)
-            val trackWidth = 8.dp.toPx()
+            val trackWidth = 4.dp.toPx()
             val radius = (w - trackWidth - 24.dp.toPx()) / 2f
 
             val startAngle = 135f
@@ -102,16 +102,6 @@ fun BatterySocRing(
             // 2. Active SOC Arc
             if (isConnected && animatedSoc > 0f) {
                 val sweep = (animatedSoc / 100f).coerceIn(0f, 1f) * totalSweep
-                // Neon glow under the active arc
-                drawArc(
-                    color = socColor.copy(alpha = 0.22f),
-                    startAngle = startAngle,
-                    sweepAngle = sweep,
-                    useCenter = false,
-                    topLeft = Offset(center.x - radius, center.y - radius),
-                    size = Size(radius * 2f, radius * 2f),
-                    style = Stroke(width = trackWidth * 2.6f, cap = StrokeCap.Round)
-                )
                 drawArc(
                     color = socColor,
                     startAngle = startAngle,
@@ -154,10 +144,10 @@ fun BatterySocRing(
         ) {
             Text(
                 text = if (isConnected) "${battery.socDisplay.toInt()}%" else "--%",
-                fontSize = 28.sp,
-                fontWeight = FontWeight.Bold,
+                fontSize = 42.sp,
+                fontWeight = FontWeight.Light,
                 color = if (isConnected) socColor else TextMuted,
-                fontFamily = FontFamily.Monospace,
+                fontFamily = FontFamily.SansSerif,
                 letterSpacing = (-0.5).sp
             )
 
@@ -176,14 +166,14 @@ fun BatterySocRing(
                 fontSize = 12.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = TextPrimary,
-                fontFamily = FontFamily.Monospace
+                fontFamily = FontFamily.SansSerif
             )
 
             Text(
                 text = if (isConnected) "${battery.voltage.toInt()} V" else "-- V",
                 fontSize = 10.sp,
                 color = TextMuted,
-                fontFamily = FontFamily.Monospace
+                fontFamily = FontFamily.SansSerif
             )
         }
     }

@@ -203,7 +203,7 @@ fun CrashReportScreen(
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = PowerRed,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
             }
         }
@@ -228,7 +228,7 @@ fun CrashReportScreen(
             Text(
                 text = stackTrace,
                 fontSize = 10.sp,
-                fontFamily = FontFamily.Monospace,
+                fontFamily = FontFamily.SansSerif,
                 color = TextSecondary,
                 lineHeight = 14.sp
             )

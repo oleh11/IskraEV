@@ -57,7 +57,7 @@ fun PreconditioningTile(
 
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(18.dp),
+        shape = RoundedCornerShape(26.dp),
         colors = CardDefaults.cardColors(containerColor = SurfaceCard),
         border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
     ) {
@@ -87,9 +87,9 @@ fun PreconditioningTile(
 
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(10.dp))
+                        .clip(RoundedCornerShape(14.dp))
                         .background(SurfaceCardElevated)
-                        .border(1.dp, statusColor.copy(alpha = 0.5f), RoundedCornerShape(10.dp))
+                        .border(1.dp, statusColor.copy(alpha = 0.5f), RoundedCornerShape(14.dp))
                         .padding(horizontal = 6.dp, vertical = 2.dp)
                 ) {
                     Text(
@@ -97,7 +97,7 @@ fun PreconditioningTile(
                         fontSize = 9.sp,
                         fontWeight = FontWeight.Bold,
                         color = statusColor,
-                        fontFamily = FontFamily.Monospace
+                        fontFamily = FontFamily.SansSerif
                     )
                 }
             }
@@ -126,7 +126,7 @@ fun PreconditioningTile(
                             fontSize = 15.sp,
                             fontWeight = FontWeight.Bold,
                             color = if (isReady) EcoGreen else if (isWarming) PowerAmber else TextPrimary,
-                            fontFamily = FontFamily.Monospace
+                            fontFamily = FontFamily.SansSerif
                         )
                     }
                     Text(
@@ -143,7 +143,7 @@ fun PreconditioningTile(
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Bold,
                             color = PowerAmber,
-                            fontFamily = FontFamily.Monospace
+                            fontFamily = FontFamily.SansSerif
                         )
                         Text(
                             text = "PTC HEATER",
@@ -161,7 +161,7 @@ fun PreconditioningTile(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(10.dp))
+                    .clip(RoundedCornerShape(14.dp))
                     .background(SurfaceCardElevated)
                     .padding(horizontal = 10.dp, vertical = 6.dp),
                 horizontalArrangement = Arrangement.SpaceBetween
@@ -170,25 +170,25 @@ fun PreconditioningTile(
                     text = "Min: ${battery.minTempC.toInt()}°C",
                     fontSize = 11.sp,
                     color = TextSecondary,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
                 Text(
                     text = "Max: ${battery.maxTempC.toInt()}°C",
                     fontSize = 11.sp,
                     color = TextSecondary,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
                 Text(
                     text = "Inlet: ${preconditioning.coolantInletTempC.toInt()}°C",
                     fontSize = 11.sp,
                     color = TextSecondary,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
                 Text(
                     text = "Target: 21°C",
                     fontSize = 11.sp,
                     color = TextMuted,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
             }
         }

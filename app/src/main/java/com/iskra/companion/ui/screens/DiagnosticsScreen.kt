@@ -115,9 +115,9 @@ fun DiagnosticsScreen(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(18.dp))
+                .clip(RoundedCornerShape(26.dp))
                 .background(SurfaceCard)
-                .border(1.dp, CardBorder, RoundedCornerShape(18.dp))
+                .border(1.dp, CardBorder, RoundedCornerShape(26.dp))
                 .padding(horizontal = 12.dp, vertical = 8.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
@@ -133,7 +133,7 @@ fun DiagnosticsScreen(
                 text = "CAN BUS LOGGER",
                 fontSize = 10.sp,
                 color = TextSecondary,
-                fontFamily = FontFamily.Monospace
+                fontFamily = FontFamily.SansSerif
             )
         }
 
@@ -141,7 +141,7 @@ fun DiagnosticsScreen(
         if (lastCrashTrace != null) {
             Card(
                 modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(18.dp),
+                shape = RoundedCornerShape(26.dp),
                 colors = CardDefaults.cardColors(containerColor = SurfaceCard),
                 border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(PowerRed.copy(alpha = 0.8f)))
             ) {
@@ -213,7 +213,7 @@ fun DiagnosticsScreen(
                             text = lastCrashTrace ?: "",
                             fontSize = 9.sp,
                             color = TextSecondary,
-                            fontFamily = FontFamily.Monospace
+                            fontFamily = FontFamily.SansSerif
                         )
                     }
                 }
@@ -223,7 +223,7 @@ fun DiagnosticsScreen(
         // Live Diagnostic Terminal Card
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
+            shape = RoundedCornerShape(26.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -315,7 +315,7 @@ fun DiagnosticsScreen(
                             text = "Console ready. Connect adapter to view handshake and CAN stream...",
                             fontSize = 11.sp,
                             color = TextMuted,
-                            fontFamily = FontFamily.Monospace
+                            fontFamily = FontFamily.SansSerif
                         )
                     } else {
                         val listState = rememberLazyListState()
@@ -340,7 +340,7 @@ fun DiagnosticsScreen(
         // Active Diagnostic Trouble Codes (DTC)
         Card(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
+            shape = RoundedCornerShape(26.dp),
             colors = CardDefaults.cardColors(containerColor = SurfaceCard),
             border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
         ) {
@@ -370,7 +370,7 @@ fun DiagnosticsScreen(
                             fontSize = 9.sp,
                             fontWeight = FontWeight.Bold,
                             color = if (dtcCount == 0) EcoGreen else PowerRed,
-                            fontFamily = FontFamily.Monospace
+                            fontFamily = FontFamily.SansSerif
                         )
                     }
                 }
@@ -434,20 +434,20 @@ private fun LogLineView(entry: LogEntry) {
             text = "$timeStr ",
             fontSize = 9.sp,
             color = TextMuted,
-            fontFamily = FontFamily.Monospace
+            fontFamily = FontFamily.SansSerif
         )
         Text(
             text = "[${entry.tag}] ",
             fontSize = 9.sp,
             color = HyundaiBlue,
-            fontFamily = FontFamily.Monospace,
+            fontFamily = FontFamily.SansSerif,
             fontWeight = FontWeight.Bold
         )
         Text(
             text = entry.message,
             fontSize = 9.sp,
             color = levelColor,
-            fontFamily = FontFamily.Monospace
+            fontFamily = FontFamily.SansSerif
         )
     }
 }
@@ -471,7 +471,7 @@ private fun DtcItemRow(dtc: DtcItem) {
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Bold,
                 color = PowerRed,
-                fontFamily = FontFamily.Monospace
+                fontFamily = FontFamily.SansSerif
             )
             Text(
                 text = dtc.description,

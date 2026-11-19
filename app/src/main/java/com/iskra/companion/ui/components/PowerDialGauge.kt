@@ -83,7 +83,7 @@ fun PowerDialGauge(
             val w = size.toPx()
             val h = size.toPx()
             val center = Offset(w / 2f, h / 2f)
-            val trackWidth = 8.dp.toPx()
+            val trackWidth = 4.dp.toPx()
             val radius = (w - trackWidth - 24.dp.toPx()) / 2f
 
             // Total sweep from 135° (bottom left) to 405° (bottom right) -> 270° total sweep
@@ -110,16 +110,6 @@ fun PowerDialGauge(
                 // Regen sweeps counter-clockwise from 270° back towards 135°
                 val regenFraction = (absPower / 60.0f).coerceIn(0f, 1f)
                 val sweep = -(regenFraction * 135f)
-                // Neon glow under the active arc
-                drawArc(
-                    color = EcoGreen.copy(alpha = 0.22f),
-                    startAngle = zeroAngle,
-                    sweepAngle = sweep,
-                    useCenter = false,
-                    topLeft = Offset(center.x - radius, center.y - radius),
-                    size = Size(radius * 2f, radius * 2f),
-                    style = Stroke(width = trackWidth * 2.6f, cap = StrokeCap.Round)
-                )
                 drawArc(
                     color = EcoGreen,
                     startAngle = zeroAngle,
@@ -134,16 +124,6 @@ fun PowerDialGauge(
                 val drawFraction = (absPower / 200.0f).coerceIn(0f, 1f)
                 val sweep = drawFraction * 135f
                 val color = if (absPower > 150f) PowerRed else if (absPower > 80f) PowerAmber else HyundaiBlue
-                // Neon glow under the active arc
-                drawArc(
-                    color = color.copy(alpha = 0.22f),
-                    startAngle = zeroAngle,
-                    sweepAngle = sweep,
-                    useCenter = false,
-                    topLeft = Offset(center.x - radius, center.y - radius),
-                    size = Size(radius * 2f, radius * 2f),
-                    style = Stroke(width = trackWidth * 2.6f, cap = StrokeCap.Round)
-                )
                 drawArc(
                     color = color,
                     startAngle = zeroAngle,
@@ -191,17 +171,10 @@ fun PowerDialGauge(
             val needleStartLen = radius * 0.62f
             val needleStart = Offset(center.x + needleStartLen * cos(needleRad), center.y + needleStartLen * sin(needleRad))
             drawLine(
-                color = needleColor.copy(alpha = 0.25f),
-                start = needleStart,
-                end = needleEnd,
-                strokeWidth = 7.dp.toPx(),
-                cap = StrokeCap.Round
-            )
-            drawLine(
                 color = needleColor,
                 start = needleStart,
                 end = needleEnd,
-                strokeWidth = 2.5.dp.toPx(),
+                strokeWidth = 2.dp.toPx(),
                 cap = StrokeCap.Round
             )
         }
@@ -215,10 +188,10 @@ fun PowerDialGauge(
             // Power Value
             Text(
                 text = String.format("%.1f", absPower),
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold,
+                fontSize = 36.sp,
+                fontWeight = FontWeight.Light,
                 color = if (isRegen) EcoGreen else if (absPower > 80f) PowerAmber else TextPrimary,
-                fontFamily = FontFamily.Monospace,
+                fontFamily = FontFamily.SansSerif,
                 letterSpacing = (-0.5).sp
             )
 
@@ -246,7 +219,7 @@ fun PowerDialGauge(
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Black,
                     color = if (gear == Gear.DRIVE) HyundaiBlue else TextPrimary,
-                    fontFamily = FontFamily.Monospace
+                    fontFamily = FontFamily.SansSerif
                 )
             }
         }

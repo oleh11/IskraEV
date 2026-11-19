@@ -65,7 +65,7 @@ fun RangeEfficiencyTile(
 
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(18.dp),
+        shape = RoundedCornerShape(26.dp),
         colors = CardDefaults.cardColors(containerColor = SurfaceCard),
         border = CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(CardBorder))
     ) {
@@ -96,7 +96,7 @@ fun RangeEfficiencyTile(
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
-                        .clip(RoundedCornerShape(10.dp))
+                        .clip(RoundedCornerShape(14.dp))
                         .background(SurfaceCardElevated)
                         .padding(horizontal = 6.dp, vertical = 2.dp)
                 ) {
@@ -112,7 +112,7 @@ fun RangeEfficiencyTile(
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
                         color = trendColor,
-                        fontFamily = FontFamily.Monospace
+                        fontFamily = FontFamily.SansSerif
                     )
                 }
             }
@@ -128,10 +128,10 @@ fun RangeEfficiencyTile(
                 Column {
                     Text(
                         text = displayRange,
-                        fontSize = 24.sp,
-                        fontWeight = FontWeight.Bold,
+                        fontSize = 52.sp,
+                        fontWeight = FontWeight.Light,
                         color = TextPrimary,
-                        fontFamily = FontFamily.Monospace
+                        fontFamily = FontFamily.SansSerif
                     )
                     Text(
                         text = "STEADY RANGE PROJECTION",
@@ -148,7 +148,7 @@ fun RangeEfficiencyTile(
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Bold,
                         color = TextSecondary,
-                        fontFamily = FontFamily.Monospace
+                        fontFamily = FontFamily.SansSerif
                     )
                     Text(
                         text = "15-MIN BASELINE",
@@ -241,9 +241,9 @@ fun RangeEfficiencyTile(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Text("-15 min", fontSize = 9.sp, color = TextMuted, fontFamily = FontFamily.Monospace)
-                Text("-7.5 min", fontSize = 9.sp, color = TextMuted, fontFamily = FontFamily.Monospace)
-                Text("Now", fontSize = 9.sp, color = trendColor, fontFamily = FontFamily.Monospace, fontWeight = FontWeight.Bold)
+                Text("-15 min", fontSize = 9.sp, color = TextMuted, fontFamily = FontFamily.SansSerif)
+                Text("-7.5 min", fontSize = 9.sp, color = TextMuted, fontFamily = FontFamily.SansSerif)
+                Text("Now", fontSize = 9.sp, color = trendColor, fontFamily = FontFamily.SansSerif, fontWeight = FontWeight.Bold)
             }
         }
     }
